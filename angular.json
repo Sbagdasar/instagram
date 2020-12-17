@@ -25,10 +25,17 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "bootstrap-icons.svg",
+                "input": "./node_modules/bootstrap-icons/",
+                "output": "/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": []
           },
@@ -124,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "instagram"
+  "defaultProject": "instagram",
+  "cli": {
+    "analytics": "dab02710-bb3d-4457-8b1e-d80edefa860f"
+  }
 }
