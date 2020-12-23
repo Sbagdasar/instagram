@@ -1,0 +1,24 @@
+<p>Нравится: {{likes}}</p>
+<p *ngIf="isCollapsed">
+  UserName описание
+  <span class="btn" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseExample">
+   ... еще
+  </span>
+</p>
+
+<div class="alert-light">
+  <input type="text" (keydown.enter)="saveComment($event)" [(ngModel)]="commentsChange" placeholder="Оставить комментарий">
+</div>
+
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+  <div class="alert-info" *ngFor="let comment of comments">
+    <app-comment [comment]="comment"></app-comment>
+  </div>
+</div>
+

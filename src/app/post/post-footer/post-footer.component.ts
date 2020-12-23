@@ -1,0 +1,18 @@
+import {Component, Input, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-post-footer',
+  templateUrl: './post-footer.component.html',
+  styleUrls: ['./post-footer.component.css']
+})
+export class PostFooterComponent implements OnInit {
+  @Input()
+  likes: any;
+  @Input()
+  comments: any;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
