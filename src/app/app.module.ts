@@ -11,6 +11,9 @@ import { PostBodyComponent } from './post/post-body/post-body.component';
 import { PostHeaderComponent } from './post/post-header/post-header.component';
 import { FooterButtonsComponent } from './post/post-footer/footer-buttons/footer-buttons.component';
 import { FooterCommentsComponent } from './post/post-footer/footer-comments/footer-comments.component';
+import { CommentComponent } from './post/post-footer/footer-comments/comment/comment.component';
+import {FormsModule} from '@angular/forms';
+import { UserNamePipe } from './post/user-name.pipe';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { FooterCommentsComponent } from './post/post-footer/footer-comments/foot
     PostBodyComponent,
     PostHeaderComponent,
     FooterButtonsComponent,
-    FooterCommentsComponent
+    FooterCommentsComponent,
+    CommentComponent,
+    UserNamePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
