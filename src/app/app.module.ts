@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -14,7 +14,12 @@ import { FooterCommentsComponent } from './post/post-footer/footer-comments/foot
 import { CommentComponent } from './post/post-footer/footer-comments/comment/comment.component';
 import {FormsModule} from '@angular/forms';
 import { UserNamePipe } from './post/user-name.pipe';
-
+import { HighLightButtonsDirective } from './post/high-light-buttons.directive';
+import { ButtonsColorDirective } from './post/buttons-color.directive';
+import {HttpReqServiceService} from './http-req-service.service';
+import { HeaderComponent } from './header/header.component';
+import { StoriesComponent } from './stories/stories.component';
+// import {LocalStorageService} from './local-storage.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,15 +31,20 @@ import { UserNamePipe } from './post/user-name.pipe';
     FooterButtonsComponent,
     FooterCommentsComponent,
     CommentComponent,
-    UserNamePipe
+    UserNamePipe,
+    HighLightButtonsDirective,
+    ButtonsColorDirective,
+    HeaderComponent,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpReqServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

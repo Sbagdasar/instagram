@@ -1,0 +1,7 @@
+.content{
+  padding: 0 207px;
+  position: relative;
+}
+.content, .inst{
+  background-color: #fafafa;
+}

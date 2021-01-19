@@ -1,14 +1,14 @@
 <div>
-  <div class="btn">
-    <i class="bi-heart" style="font-size: 1.5rem; color: #000;"></i>
+  <div appHighLightButtons appButtonsColor [isLiked]="isLiked" (click)="like()"  class="btn" >
+    <i appButtonsColor [isLiked]="isLiked"  class="bi-heart" style="font-size: 1.5rem; color: #000;"></i>
   </div>
-  <div class="btn">
-    <i class="bi-chat" style="font-size: 1.5rem; color: #000;"></i>
+  <div appHighLightButtons  class="btn">
+    <i appButtonsColor [color]="color"  class="bi-chat" style="font-size: 1.5rem; color: #000;"></i>
   </div>
-  <div class="btn">
-    <i class="bi-cursor" style="font-size: 1.5rem; color: #000;"></i>
+  <div appHighLightButtons class="btn">
+    <i  class="bi-cursor" style="font-size: 1.5rem; color: #000;"></i>
   </div>
-  <div class="btn float-right">
-    <i class="bi-bookmark" style="font-size: 1.5rem; color: #000;"></i>
+  <div appHighLightButtons appButtonsColor [isSaved]="isSaved" (click)="save()" class="btn float-right">
+    <i  class="bi-bookmark" style="font-size: 1.5rem; color: #000;"></i>
   </div>
 </div>

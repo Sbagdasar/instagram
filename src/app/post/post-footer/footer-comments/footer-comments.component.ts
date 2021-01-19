@@ -1,4 +1,6 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
+// import {LocalStorageService} from '../../../local-storage.service';
+
 
 @Component({
   selector: 'app-footer-comments',
@@ -13,14 +15,18 @@ export class FooterCommentsComponent implements OnInit {
   comments: any;
   @Output()
   commentsChange: any;
-  constructor() { }
-  saveComment(event: any): void {
-    this.comments.push({
-      user: 'user4',
-      text : this.commentsChange,
-    });
-    console.log(this.comments);
-  }
+  constructor( ) { }
+   saveComment(event: any): void {
+     this.comments.push({
+       user: `user ${this.randomInteger(1, 9)}`,
+       text : this.commentsChange,
+     });
+  //   this.storage.setData('user', this.commentsChange);
+   }
   ngOnInit(): void {
+  }
+  randomInteger(min: any, max: any): number {
+    const rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
   }
 }
