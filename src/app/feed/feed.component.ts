@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
-export class FeedComponent {
-
+export class FeedComponent implements OnInit{
   title = 'instagram';
   posts = [{
     id: 1,
@@ -91,5 +90,16 @@ export class FeedComponent {
   randomInteger(min: any, max: any): number {
     const rand = min - 0.5 + Math.random() * (max - min + 1);
     return Math.round(rand);
+  }
+
+  ngOnInit(): void {
+    // функция  сохранения данных в лс
+    for (let i = 0; i < this.posts.length; i++) {
+      localStorage.setItem(`id ${this.posts[i].id}`, `${this.posts[i].id.toString()}`);
+      localStorage.setItem(`author ${this.posts[i].id}`, this.posts[i].author);
+      localStorage.setItem(`likes ${this.posts[i].id}`, `${this.randomInteger(50, 300)}`);
+      // localStorage.setItem(`comments ${this.posts[i].id}`, this.posts[i].comments.join(''));
+
+    }
   }
 }

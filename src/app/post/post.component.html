@@ -1,7 +1,7 @@
 <div class="post">
   <app-post-header [author]="post.author"></app-post-header>
 
-  <app-post-body (click)="goToItemPost()"></app-post-body>
+  <app-post-body [id]="post.id" (click)="goToItemPost()"></app-post-body>
 
   <app-post-footer [likes]="post.likes" [comments]="post.comments" [author]="post.author"></app-post-footer>
 </div>

@@ -12,7 +12,8 @@ export class PostBodyComponent implements OnInit {
   img1: any;
   @Input()
   img: any;
-
+  @Input()
+  id: any;
   constructor(private getDataService: HttpReqServiceService) {}
 
   ngOnInit(): void {
@@ -21,6 +22,7 @@ export class PostBodyComponent implements OnInit {
         this.response = response;
         this.image = this.response.map((items: any) => items.download_url);
         this.img1 = this.image[this.randomInteger(0, 30)];
+        localStorage.setItem(`img ${this.id}`, this.img1);
       }, error => {
         console.error(error);
       });
