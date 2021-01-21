@@ -10,6 +10,8 @@ export class PostFooterComponent implements OnInit {
   likes: any;
   @Input()
   comments: any;
+  @Input()
+  author: any ;
   constructor() { }
 
   ngOnInit(): void {

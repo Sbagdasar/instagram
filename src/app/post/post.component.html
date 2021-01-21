@@ -1,7 +1,8 @@
+<router-outlet></router-outlet>
 <div class="post">
-<app-post-header [author]="post.author"></app-post-header>
+  <app-post-header [author]="post.author"></app-post-header>
 
-<app-post-body [img]="post.img"></app-post-body>
+  <app-post-body (click)="goToItemPost()"></app-post-body>
 
-<app-post-footer [likes]="post.likes" [comments]="post.comments"></app-post-footer>
+  <app-post-footer [likes]="post.likes" [comments]="post.comments" [author]="post.author"></app-post-footer>
 </div>

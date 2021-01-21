@@ -13,18 +13,20 @@ export class PostBodyComponent implements OnInit {
   @Input()
   img: any;
 
-  constructor(private http: HttpReqServiceService) {}
+  constructor(private getDataService: HttpReqServiceService) {}
 
   ngOnInit(): void {
-    this.http.getData()
+    this.getDataService.getData()
       .subscribe(response => {
         this.response = response;
-        console.log(this.response);
         this.image = this.response.map((items: any) => items.download_url);
-        this.img1 = this.image[0];
-        console.log(this.img1);
+        this.img1 = this.image[this.randomInteger(0, 30)];
       }, error => {
         console.error(error);
       });
+  }
+  randomInteger(min: any, max: any): number {
+    const rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
   }
 }

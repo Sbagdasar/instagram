@@ -19,7 +19,10 @@ import { ButtonsColorDirective } from './post/buttons-color.directive';
 import {HttpReqServiceService} from './http-req-service.service';
 import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
-// import {LocalStorageService} from './local-storage.service';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import {LocalStorageService} from './local-storage.service';
+import { FeedComponent } from './feed/feed.component';
+import { HeaderButtomsDirective } from './header/header-buttoms.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,10 @@ import { StoriesComponent } from './stories/stories.component';
     HighLightButtonsDirective,
     ButtonsColorDirective,
     HeaderComponent,
-    StoriesComponent
+    StoriesComponent,
+    UserProfileComponent,
+    FeedComponent,
+    HeaderButtomsDirective
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,7 @@ import { StoriesComponent } from './stories/stories.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpReqServiceService],
+  providers: [HttpReqServiceService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

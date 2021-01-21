@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
-// import {LocalStorageService} from '../../../local-storage.service';
+import {LocalStorageService} from '../../../local-storage.service';
 
 
 @Component({
@@ -13,15 +13,17 @@ export class FooterCommentsComponent implements OnInit {
   likes: any;
   @Input()
   comments: any;
+  @Input()
+  author: any ;
   @Output()
   commentsChange: any;
-  constructor( ) { }
+  constructor(private storage: LocalStorageService) { }
    saveComment(event: any): void {
      this.comments.push({
        user: `user ${this.randomInteger(1, 9)}`,
        text : this.commentsChange,
      });
-  //   this.storage.setData('user', this.commentsChange);
+     this.storage.setData('user', this.commentsChange);
    }
   ngOnInit(): void {
   }

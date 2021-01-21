@@ -1,6 +1,6 @@
 <p>Нравится: {{likes}}</p>
 <p *ngIf="isCollapsed">
-  UserName описание
+  {{author | userName}} описание
   <span class="btn" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
           aria-controls="collapseExample">
    ... еще
@@ -8,7 +8,7 @@
 </p>
 
 <div class="alert-light">
-  <input type="text" (keydown.enter)="saveComment($event)" [(ngModel)]="commentsChange" placeholder="Оставить комментарий">
+  <input class="inp_width" type="text" (keydown.enter)="saveComment($event)" [(ngModel)]="commentsChange" placeholder="Оставить комментарий">
 </div>
 
 <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
