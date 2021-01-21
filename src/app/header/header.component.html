@@ -1,0 +1,25 @@
+<nav class="card-header">
+  <div class="toolbar">
+    <div class="main-toolbar">
+      <div class="logo">
+        <a href="/">
+          <div class="logo-image">
+            <img alt="Instagram" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+          </div>
+        </a>
+      </div>
+      <div class="bi-search">
+        <input class="search-input" type="text" autocapitalize="none" placeholder="Поиск" value="">
+      </div>
+      <div class="menu">
+        <div class="menu_items">
+          <div appHeaderButtons [homeClicked]="homeClicked" (click)="homeClick()" class="menu_item menu_item_home" [routerLink]="['/']"></div>
+          <div class="menu_item menu_item_massages"></div>
+          <div class="menu_item menu_item_compas"></div>
+          <div appHeaderButtons [likeClicked]="likeClicked" class="menu_item menu_item_likes" (click)="likesClicked()"></div>
+          <div appHeaderButtons [profileClicked]="profileClicked" class="menu_item menu_item_user" (click)="goToUserProfile()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

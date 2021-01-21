@@ -1,0 +1,67 @@
+.card-header{
+  height: 54px;
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 400;
+}
+.toolbar{
+  width: 100%;
+
+}
+.main-toolbar{
+  max-width: 975px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: auto;
+}
+.menu, .logo{
+  width: 360px;
+}
+.search-input{
+  border-color: #ccc;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.menu_items{
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  padding-left: 24px;
+}
+.menu_item{
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_glyphs_798b49104da7.png/798b49104da7.png");
+  background-repeat: no-repeat;
+  background-size: 450px 450px;
+  margin-left: 22px;
+  height: 22px;
+  width: 22px;
+}
+.menu_item_home{
+  background-position: -406px -23px;
+  cursor: pointer;
+}
+.menu_item_massages{
+  background-position: -45px -402px;
+  cursor: pointer;
+}
+.menu_item_likes{
+  background-position: -406px 0;
+  cursor: pointer;
+}
+.menu_item_compas{
+  background-position: -155px -371px;
+  cursor: pointer;
+}
+.menu_item_user{
+  background-position: -384px -427px;
+  cursor: pointer;
+}
