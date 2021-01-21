@@ -13,10 +13,10 @@ export class PostComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {console.log(params);
-    });
+    this.route.params.subscribe();
   }
   goToItemPost(): void{
-    this.router.navigate(['post', this.post.id]);
+    this.router.navigate(['post/', this.post.id]);
+    console.log(this.post);
   }
 }

@@ -22,7 +22,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {LocalStorageService} from './local-storage.service';
 import { FeedComponent } from './feed/feed.component';
-import { HeaderButtomsDirective } from './header/header-buttoms.directive';
+import { HeaderButtonsDirective } from './header/header-buttons.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import { HeaderButtomsDirective } from './header/header-buttoms.directive';
     StoriesComponent,
     UserProfileComponent,
     FeedComponent,
-    HeaderButtomsDirective
+    HeaderButtonsDirective
   ],
   imports: [
     BrowserModule,

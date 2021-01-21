@@ -1,15 +1,29 @@
-.bi::before {
-  display: inline-block;
-  content: "";
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+.btn_itemss{
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.btn_footerr{
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_glyphs_798b49104da7.png/798b49104da7.png");
   background-repeat: no-repeat;
-  background-size: 1rem 1rem;
+  background-size: 450px 450px;
+  margin-left: 10px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
 }
-
-.btn{
-  padding: 0;
-  border-radius: 50%;
+.like{
+  background-position:-406px 0 ;
 }
-i {
-  border-radius: 50%;
+.comment {
+  background-position:-382px -338px ;
+}
+.repost{
+  background-position:-44px -402px ;
+}
+.save{
+  background-position:-133px -427px ;
+  margin-left: 79%;
 }
