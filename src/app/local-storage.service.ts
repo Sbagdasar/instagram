@@ -11,16 +11,22 @@ export class LocalStorageService {
     localStorage.setItem('user', user);
     localStorage.setItem('text', text);
   }
-  // getData(user: string): any{
-  //   return localStorage.getItem(user);
-  // }
   getDataById(id: any): any{
     let data: object;
+    let comments = [];
+    let commentsLS = localStorage.getItem(`comments ${id}`);
+    let comment = commentsLS.split('++');
+    for ( let itemComment of comment){
+      let itemCommentInfo = itemComment.split('/');
+      itemCommentInfo[0] != '' ? comments.push({user: itemCommentInfo[0], text: itemCommentInfo[1]}) : null;
+    };
+    console.log(comment, 121212121212);
     data = {
       id: id,
-      author : localStorage.getItem('author'),
-      likes : localStorage.getItem(`likes`),
-      img : localStorage.getItem(`img`),
+      author : localStorage.getItem(`author ${id}`),
+      likes : localStorage.getItem(`likes ${id}`),
+      img : localStorage.getItem(`img ${id}`),
+      comments : comments,
     };
     console.log(11, data);
     return data;

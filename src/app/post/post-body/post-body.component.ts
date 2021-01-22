@@ -22,7 +22,8 @@ export class PostBodyComponent implements OnInit {
         this.response = response;
         this.image = this.response.map((items: any) => items.download_url);
         this.img1 = this.image[this.randomInteger(0, 30)];
-        localStorage.setItem(`img ${this.id}`, this.img1);
+        this.img = this.img1;
+        localStorage.setItem(`img ${this.id}`, this.img);
       }, error => {
         console.error(error);
       });

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {LocalStorageService} from '../local-storage.service';
 
@@ -10,6 +10,7 @@ import {LocalStorageService} from '../local-storage.service';
 export class PostComponent implements OnInit {
   @Input()
   post: any;
+  imgUrl: any;
   constructor(private route: ActivatedRoute,
               private localStorage: LocalStorageService,
               private router: Router) { }
@@ -21,8 +22,10 @@ export class PostComponent implements OnInit {
         this.post = this.localStorage.getDataById(params.id) : null
     });
   }
-  goToItemPost(): void{
+  goToItemPost(id: any): void{
     this.router.navigate(['post/', this.post.id]);
-    console.log(this.post);
+    this.imgUrl = localStorage.getItem(`img ${id}`);
+    localStorage.setItem(`img ${id}`, this.imgUrl);
+    console.log(21212, this.imgUrl);
   }
 }
