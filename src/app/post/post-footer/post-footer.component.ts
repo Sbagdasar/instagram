@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PostFooterComponent implements OnInit {
   @Input()
+  post: any;
+  @Input()
   likes: any;
   @Input()
   comments: any;

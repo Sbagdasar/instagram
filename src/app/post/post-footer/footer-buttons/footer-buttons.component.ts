@@ -14,11 +14,8 @@ export class FooterButtonsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  like(id: any): void {
-    // this.isLiked ? this.isLiked = false : this.isLiked = true;
+  like(): void {
     this.isLiked = !this.isLiked;
-    localStorage.getItem(`likes ${id}`);
-    console.log(localStorage.getItem(`likes 1`));
   }
   save(): void {
     this.isSaved ? this.isSaved = false : this.isSaved = true;

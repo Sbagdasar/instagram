@@ -20,12 +20,10 @@ export class LocalStorageService {
       let itemCommentInfo = itemComment.split('/');
       itemCommentInfo[0] != '' ? comments.push({user: itemCommentInfo[0], text: itemCommentInfo[1]}) : null;
     };
-    console.log(comment, 121212121212);
     data = {
       id: id,
       author : localStorage.getItem(`author ${id}`),
       likes : localStorage.getItem(`likes ${id}`),
-      img : localStorage.getItem(`img ${id}`),
       comments : comments,
     };
     console.log(11, data);
